@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Location Stats for {{location}}</title>
+    <link type="text/css" rel="stylesheet" href="modern.css" />
+    <style>
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        .stats-table th, .stats-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--input-background);
+        }
+        
+        .stats-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 500;
+        }
+        
+        .stats-table tr:hover {
+            background-color: var(--input-background);
+        }
+    </style>
+</head>
+<body>
+    <div class="stats-container">
+        <h2>Job Market Statistics for {{location}}</h2>
+        <table class="stats-table">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Jobs</td>
+                    <td>{{job_count}}</td>
+                </tr>
+                <tr>
+                    <td>Average Duration (days)</td>
+                    <td>{{avg_duration_days}}</td>
+                </tr>
+                <tr>
+                    <td>Remote Jobs</td>
+                    <td>{{remote_job_count}}</td>
+                </tr>
+                <tr>
+                    <td>Active Companies</td>
+                    <td>{{unique_companies}}</td>
+                </tr>
+                <tr>
+                    <td>Most Common Job Type</td>
+                    <td>{{top_job_type}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html> 

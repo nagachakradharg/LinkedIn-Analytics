@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #9147ff;
+    --secondary-color: #772ce8;
+    --background-color: #0e0e10;
+    --card-background: #1f1f23;
+    --text-color: #efeff1;
+    --border-radius: 8px;
+    --input-background: #18181b;
+    --error-color: #ff4747;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #adadb8;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.search-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.search-card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.search-card:hover {
+    transform: translateY(-5px);
+}
+
+.search-card h2 {
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--input-background);
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+.input-group input:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background: var(--secondary-color);
+}
+
+.results-container {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.results-frame {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--card-background);
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 10px;
+    }
+    
+    .search-card {
+        min-width: 100%;
+    }
+} 

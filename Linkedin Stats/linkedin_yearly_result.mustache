@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Yearly Stats for {{year}}</title>
+    <link type="text/css" rel="stylesheet" href="modern.css" />
+    <style>
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        .stats-table th, .stats-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--input-background);
+        }
+        
+        .stats-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 500;
+        }
+        
+        .stats-table tr:hover {
+            background-color: var(--input-background);
+        }
+    </style>
+</head>
+<body>
+    <div class="stats-container">
+        <h2>Job Duration Statistics for {{year}}</h2>
+        <table class="stats-table">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Average Duration (days)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#months}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{value}}</td>
+                </tr>
+                {{/months}}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html> 
